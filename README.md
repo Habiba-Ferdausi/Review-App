@@ -30,13 +30,13 @@ npm run build
 
 Open the local URL printed by Vite (usually `http://localhost:5173`).
 
-## 🧩 Tech Stack
+## Tech Stack
 
 - **React**, **TypeScript**, **Vite**
 - **Tailwind CSS** 
 - **Framer Motion**
 - **localStorage** 
 
-## ⏱ Time Spent
+## Time Spent
 
 _Fill before submitting:_ **~ 6 hours** (planning • implementation • polish)
