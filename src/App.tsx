@@ -10,7 +10,8 @@ import Leaderboard from "./components/ui/Leaderboard";
 import Distribution from "./components/reviews/Distribution";
 import HeroSection from "./components/Herosection";
 import Footer from "./components/Footer";
-import EditReviewDialog from "./components/ui/editReviewDialog";
+import EditReviewDialog from "./components/ui/EditReviewDialog";
+
 
 
 

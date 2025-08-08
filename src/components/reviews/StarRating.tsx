@@ -23,7 +23,7 @@ export default function StarRating({ value, onChange, size = 14, readOnly = fals
             onClick={() => !readOnly && onChange?.(s)}
             className=" text-lg"
             aria-label={`Set rating ${s}`}
-            aria-required
+            
           >
             <TiStarFullOutline
              size={20}

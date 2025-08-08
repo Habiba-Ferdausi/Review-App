@@ -21,7 +21,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="relative g:block hidden"
+            className="relative lg:block hidden"
           >
             <div className="w-full h-full overflow-hidden">
              <img src="/hero.gif" className="w-[300px] mx-auto h-[300px]"/>
