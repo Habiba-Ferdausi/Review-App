@@ -52,10 +52,11 @@ export default function ReviewCard({
       </div>
       <p className="mt-3 text-sm text-slate-800 mb-2 whitespace-pre-wrap">{item.text}</p>
 
-      <div className="mt-4 flex items-center gap-1 text-xs text-slate-500">
-        <LuCalendarClock className="h-4 w-4 text-primary" />
-        <span className="font-medium">Posted: {formatDate(item.createdAt)}</span>
-        {item.updatedAt && <span className="ml-3 text-green-400 font-medium">Updated: {formatDate(item.updatedAt)}</span>}
+      <div className="mt-4  text-xs text-slate-500">
+        <div className="flex items-center gap-1 mb-3"> <LuCalendarClock className="h-4 w-4 text-primary" />
+        <span className="font-medium">Posted: {formatDate(item.createdAt)}</span></div>
+        <div className="flex items-center gap-1"> <LuCalendarClock className="h-4 w-4 text-green-500" /> {item.updatedAt && <span className="  font-medium">Updated: {formatDate(item.updatedAt)}</span>}</div>
+      
       </div>
 
       <ConfirmDialog

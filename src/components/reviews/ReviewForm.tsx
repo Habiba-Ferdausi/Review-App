@@ -76,7 +76,7 @@ export default function ReviewForm({
             <input
               value={shopName}
               onChange={(e) => setShopName(e.target.value)}
-              placeholder="e.g. Pizzaburg"
+              placeholder="e.g. Daraz"
               className={`input ${(shopName.trim().length === 0)}`}
               required
             />

@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-import type { Review } from "../types";
+import type { Review } from "../../types";
 
 export default function Distribution({ items }: { items: Review[] }) {
   const counts = [1,2,3,4,5].map(k => items.filter(i => i.rating === k).length);

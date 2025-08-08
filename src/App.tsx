@@ -7,9 +7,11 @@ import Toolbar from "./components/reviews/Toolbar";
 import ReviewForm from "./components/reviews/ReviewForm";
 import ReviewList from "./components/reviews/ReviewList";
 import Leaderboard from "./components/ui/Leaderboard";
-import Distribution from "./components/Distribution";
+import Distribution from "./components/reviews/Distribution";
 import HeroSection from "./components/Herosection";
 import Footer from "./components/Footer";
+import EditReviewDialog from "./components/ui/editReviewDialog";
+
 
 
 const STORAGE_KEY = "userReview";
@@ -44,10 +46,11 @@ export default function App() {
   }, [reviews, query, sort, ratingFilter]);
 
   const handleCreate = (rv: Review) => setReviews((prev) => [rv, ...prev]);
-  const handleUpdate = (rv: Review) => {
+   const handleUpdate = (rv: Review) => {
     setReviews((prev) => prev.map((p) => (p.id === rv.id ? rv : p)));
     setEditing(null);
   };
+
   const handleDelete = (id: string) => setReviews((prev) => prev.filter((p) => p.id !== id));
 
 
@@ -63,11 +66,11 @@ export default function App() {
           <p className="text-sm text-slate-600 dark:text-slate-400">Share your experience and help the community.</p>
           <div className="mt-4">
             <ReviewForm
-              key={editing ? editing.id : "create"}
-              initial={editing || undefined}
-              onCreate={handleCreate}
-              onUpdate={handleUpdate}
-              onCancel={() => setEditing(null)}
+              key="create"   
+             initial={undefined}  
+        onCreate={handleCreate}
+        onUpdate={handleUpdate}     
+        onCancel={() => setEditing(null)}
             />
           </div>
         </div>
@@ -86,7 +89,7 @@ export default function App() {
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 pb-9 ">
           <div className="lg:col-span-2">
-            <ReviewList items={filtered} onEdit={setEditing} onDelete={handleDelete} />
+            <ReviewList items={filtered}   onEdit={(r) => setEditing(r)} onDelete={handleDelete} />
           </div>
           <div className="space-y-4">
             <Leaderboard items={reviews} />
@@ -94,7 +97,12 @@ export default function App() {
           </div>
         </div>
       </section>
-
+<EditReviewDialog
+  open={!!editing}
+  initial={editing}
+  onClose={() => setEditing(null)}
+  onSave={handleUpdate}
+/>
 <Footer/>
  
     </div>
