@@ -4,8 +4,8 @@ export default function Header() {
       <div className="container-app py-4 flex items-center justify-between">
        
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-xl bg-white/20 flex items-center justify-center font-extrabold text-primary bg-white">
-            <span className="text-lg text-white/80">OS</span>
+          <div className="h-10 w-10 rounded-xl bg-white/70 flex items-center justify-center font-extrabold  ">
+           <img src="/review.svg" alt=""  />
           </div>
           <div className="leading-tight">
             <p className="font-extrabold tracking-tight text-lg">
