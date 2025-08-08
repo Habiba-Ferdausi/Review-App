@@ -9,6 +9,7 @@ import ReviewList from "./components/reviews/ReviewList";
 import Leaderboard from "./components/ui/Leaderboard";
 import Distribution from "./components/Distribution";
 import HeroSection from "./components/Herosection";
+import Footer from "./components/Footer";
 
 
 const STORAGE_KEY = "userReview";
@@ -72,7 +73,7 @@ export default function App() {
         </div>
       </section>
 
-      <section className="container-app space-y-4">
+      <section id="#leaderboard" className="container-app space-y-4">
         <Toolbar
           query={query}
           onQuery={setQuery}
@@ -94,6 +95,7 @@ export default function App() {
         </div>
       </section>
 
+<Footer/>
  
     </div>
   );
