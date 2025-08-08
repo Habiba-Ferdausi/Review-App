@@ -22,18 +22,18 @@ export default function Toolbar({
   return (
     <div className="card p-6">
       <div className="flex flex-col gap-3">
-        <div className="flex flex-col gap-3 lg:flex-row items-center justify-between">
+        <div className="flex flex-col  gap-3 lg:flex-row lg:items-center justify-between">
           <div className="relative w-full lg:w-[340px]">
       <input
         value={query}
         onChange={(e) => onQuery(e.target.value)}
         placeholder="Search by shop name..."
-        className="input pl-9"
+        className="input lg:pl-5"
       />
     </div>
           <div className="flex items-center gap-2">
-            <label className="label font-medium text-base mt-2">Sort:</label>
-            <select value={sort} onChange={(e) => onSort(e.target.value as any)} className="input">
+            <label className="label font-medium lg:text-base text-sm mt-2">Sort:</label>
+            <select value={sort} onChange={(e) => onSort(e.target.value as any)} className="input lg:text-base text-sm">
               <option value="newest">Newest </option>
               <option value="oldest">Oldest</option>
               <option value="rating-desc">Highest rating</option>

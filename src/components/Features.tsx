@@ -13,12 +13,12 @@ const items = [
 
 export default function Features() {
   return (
-    <section className="container-app py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <section className="container-app lg:py-10 py-7">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {items.map(({ icon: Icon, title, desc }) => (
           <div key={title} className="card p-5">
             <Icon className="h-5 w-5 text-yellow-400" />
-            <h3 className="mt-2 font-semibold">{title}</h3>
+            <h3 className="mt-2 font-semibold text-base">{title}</h3>
             <p className="text-sm text-slate-600 ">{desc}</p>
           </div>
         ))}

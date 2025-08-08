@@ -54,7 +54,7 @@ export default function ReviewCard({
 
       <div className="mt-4 flex items-center gap-1 text-xs text-slate-500">
         <LuCalendarClock className="h-4 w-4 text-primary" />
-        <span className="font-medium">Created: {formatDate(item.createdAt)}</span>
+        <span className="font-medium">Posted: {formatDate(item.createdAt)}</span>
         {item.updatedAt && <span className="ml-3 text-green-400 font-medium">Updated: {formatDate(item.updatedAt)}</span>}
       </div>
 
