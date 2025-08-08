@@ -39,4 +39,4 @@ Open the local URL printed by Vite (usually `http://localhost:5173`).
 
 ## Time Spent
 
-_Fill before submitting:_ **~ 6 hours** (planning • implementation • polish)
+_Fill before submitting:_ **6 hours** (planning • implementation • polish)
