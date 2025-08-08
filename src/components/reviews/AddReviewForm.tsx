@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import type { Review } from "../../types";
 import { uid } from "../../utils";
@@ -19,13 +19,11 @@ export default function ReviewForm({
 }) {
   const [shopName, setShopName] = useState(initial?.shopName ?? "");
   const [text, setText] = useState(initial?.text ?? "");
-  const [rating, setRating] = useState<number>(initial?.rating ?? 0);
+  const [rating, setRating] = useState<number>(initial?.rating ?? 1);
   const [saved, setSaved] = useState<null | "created" | "updated">(null);
   const topRef = useRef<HTMLDivElement | null>(null);
 
-  const valid = useMemo(() => {
-    return shopName.trim().length > 0 && text.trim().length >= 4 && rating > 0;
-  }, [shopName, text, rating]);
+
 
   useEffect(() => {
     if (saved) {
@@ -36,7 +34,10 @@ export default function ReviewForm({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!valid) return;
+if (rating < 1) {
+  alert("Please select at least 1 star.");
+  return;
+}
 
     if (initial) {
       const updated: Review = {
@@ -59,7 +60,7 @@ export default function ReviewForm({
       onCreate(rv);
       setShopName("");
       setText("");
-      setRating(0);
+      setRating(1)
       setSaved("created");
       topRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
     }
@@ -98,6 +99,7 @@ export default function ReviewForm({
             placeholder="Share your experience..."
             rows={4}
             className="input min-h-[120px]" 
+            required
           />
 
         </div>

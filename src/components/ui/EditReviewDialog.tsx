@@ -1,6 +1,6 @@
 import { CgClose } from "react-icons/cg";
 import type { Review } from "../../types";
-import ReviewForm from "../reviews/ReviewForm";
+import ReviewForm from "../reviews/AddReviewForm";
 
 
 export default function EditReviewDialog({

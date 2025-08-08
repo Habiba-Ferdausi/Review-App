@@ -4,7 +4,7 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 import Header from "./components/Header";
 import Features from "./components/Features";
 import Toolbar from "./components/reviews/Toolbar";
-import ReviewForm from "./components/reviews/ReviewForm";
+import ReviewForm from "./components/reviews/AddReviewForm";
 import ReviewList from "./components/reviews/ReviewList";
 import Leaderboard from "./components/ui/Leaderboard";
 import Distribution from "./components/reviews/Distribution";
